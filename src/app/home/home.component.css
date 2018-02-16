@@ -1,0 +1,20 @@
+.image{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+div strong{
+    font-size: 12px;
+}
+
+div.col{
+    font-size: 12px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+

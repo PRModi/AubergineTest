@@ -1,0 +1,103 @@
+<div class="container" style="background: whitesmoke">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-sm-offset-3 col-md-6 col-lg-4" *ngFor="let company of companies; let i=index">
+      <div>
+        <div class="card" style="width: 22rem;">
+          <img class="img-thumbnail image" [src]="company.logoUrl" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" class="text-center">{{company.companyDetail.companyName || '-'}}</h5>
+            <br>
+            <div class="row">
+              <div class="col">
+                <strong>MP</strong>
+              </div>
+              <div class="col">
+                <strong>LSP</strong>
+              </div>
+              <div class="col">
+                <strong>LSS</strong>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                {{company.marketData.marketPercent || '-'}}%
+              </div>
+              <div class="col">
+                {{company.marketData.lastSalePrice || '-'}}
+              </div>
+              <div class="col">
+                {{company.marketData.lastSaleSize || '-'}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                <strong>Last Sale Time</strong>
+              </div>
+              <div class="col">
+                <strong>Last Updated</strong>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                {{company.marketData.lastSaleTime | date:'short'}}
+              </div>
+              <div class="col">
+                {{company.marketData.lastUpdated | date:'short'}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                <strong>Sector</strong>
+              </div>
+              <div class="col">
+                {{company.companyDetail.sector || '-'}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <strong>Industry</strong>
+              </div>
+              <div class="col">
+                {{company.companyDetail.industry || '-'}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <strong>CEO</strong>
+              </div>
+              <div class="col">
+                {{company.companyDetail.CEO || '-' }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <strong>Website</strong>
+              </div>
+              <div class="col" style="font-size: 12px">
+                <a [href]="company.companyDetail.website" target="_blank">{{company.companyDetail.website}}</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <strong>Description</strong>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col">
+                {{company.companyDetail.description}}
+                <!-- <textarea class="form-control" rows="4">{{company.companyDetail.description}}</textarea> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <br>
+  </div>
+</div>
